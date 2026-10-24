@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointer-presence-gate"
+version = "0.1.0"
+description = "Offline synthetic JSON Pointer presence checker"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Pointer Presence Gate contributors"}]
+dependencies = []
+
+[project.scripts]
+pointer-presence-gate = "pointer_presence_gate.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
